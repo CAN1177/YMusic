@@ -1,0 +1,44 @@
+<!--pages/player/chat.wxml-->
+<view class="container">
+  <view class="chat-head">
+    <view class="chat-song">
+      <image src="{{song.album_min}}"></image>
+      <view class="chat-song-des">
+        <text class="substr">{{song.song_name}}</text>
+        <text>{{song.song_orig}}</text>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view class="chat-body" scroll-y bindscrolltolower="moreChat">
+
+    <view class="chat-list">
+      <view class="chat-item" wx:for="{{chatList}}" >  
+        <view class="user-inline">
+           <image src="{{item.userInfo.avatarUrl}}"></image> 
+          <view class="user-des">
+            <text>{{item.userInfo.nickName}}</text>
+            <text>{{item.time}}</text> 
+            <!-- <text>我陷入沉思，回想自己这些年的孤往，一路匆忙 似乎不曾明朗。和来人间一趟的许多朋友都好相像。我探起头踮起脚看我的未来，无尽阴霾不露一点微光。我握着半分落寞 半分迷茫，站在宽广昏暗的马路上，不知道这条平凡之路去往何方。</text> 
+            <text>2018年10月29日 20:27</text>-->
+          </view>
+        </view>
+        <view class="chat-info">
+          {{item.chat}} 
+        </view>
+      </view>
+    </view>
+
+
+       <!-- 09年初中没毕业就出来学做水电工了。不想解释为什么没读书，连续四年，两点一线，不和同学朋友联系，从来不出故乡的小镇。直到一天突然听到老男孩这首歌，突然觉得我是不是老了，青春就这样没了吗？不，青春它不是和年龄有关系的。青春是种生活的态度，那一年我决定要出去看看，我有个梦想，骑自行车去西藏，13年和家里做好思想工作，买车 买装备，锻炼身体，14年的5月8号带着家人朋友的祝福出发了。14年6月14号安全回家，当脚再次踏上故乡的土地，那一刻，心情是复杂的，一个月后听到平凡之路这首歌。才明白，平凡的人，都有自己的不平凡之路，能在夕阳下坐在家门口听这首歌就是平凡。 -->
+      
+   
+
+  </scroll-view>
+
+  <form class="chat-form" bindsubmit="addChat">
+    <button form-type='submit'>发送</button>
+    <input name="chat" value="{{chat}}" placeholder="发表评论"  />
+  </form>
+
+</view>

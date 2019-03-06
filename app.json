@@ -1,0 +1,20 @@
+{
+  "pages" : [
+    "pages/home/index",
+    "pages/player/index",
+    "pages/player/chat",
+    "pages/sheet/list",
+    "pages/start/index",
+    "pages/like/index",
+    "pages/search/index",
+    "pages/search/list"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTitleText": "YMusic",
+    "navigationBarTextStyle": "white"
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}
